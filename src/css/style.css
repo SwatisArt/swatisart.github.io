@@ -357,10 +357,22 @@ body {
     padding: 0.5rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    display: inline-block;
 }
 
 .social-link:hover {
     background-color: rgba(255,255,255,0.2);
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* Makes the icon white */
+    transition: filter 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    filter: brightness(0) invert(0.8); /* Slightly dimmed on hover */
 }
 
 .copyright {

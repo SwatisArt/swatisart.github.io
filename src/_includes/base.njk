@@ -15,7 +15,12 @@
             <h1 class="business-name">Swati's Artistry</h1>
         </div>
         <nav class="main-nav">
-            <ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu">
                 <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
                 <li><a href="/henna/" {% if page.url == "/henna/" %}class="active"{% endif %}>Henna</a></li>
                 <li><a href="/makeup/" {% if page.url == "/makeup/" %}class="active"{% endif %}>Makeup</a></li>
@@ -45,5 +50,35 @@
         </div>
         <p class="copyright">&copy; 2025 Swati's Artistry. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                mobileMenuToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenuToggle.contains(event.target) && !navMenu.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

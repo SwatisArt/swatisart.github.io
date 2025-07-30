@@ -1,0 +1,115 @@
+---
+layout: base.njk
+title: Contact Us
+---
+
+<div class="page-header">
+    <h1>Contact Us</h1>
+    <p class="page-subtitle">Book your appointment or get in touch with any questions</p>
+</div>
+
+<section class="contact-info">
+    <div class="contact-grid">
+        <div class="contact-details">
+            <h2>Get In Touch</h2>
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>(555) 123-4567</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>info@serenitybeauty.com</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p>123 Beauty Lane<br>
+                Wellness District<br>
+                Your City, State 12345</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 7:00 PM<br>
+                Saturday: 9:00 AM - 6:00 PM<br>
+                Sunday: 10:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="POST" class="inquiry-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service of Interest</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="henna">Henna Art</option>
+                        <option value="makeup">Makeup Services</option>
+                        <option value="facials">Facial Treatments</option>
+                        <option value="massages">Massage Therapy</option>
+                        <option value="multiple">Multiple Services</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell us about your needs, preferred dates, or any questions you have..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="booking-info">
+    <h2>Booking Information</h2>
+    <div class="booking-policies">
+        <div class="policy">
+            <h3>Scheduling</h3>
+            <ul>
+                <li>Appointments can be booked by phone, email, or online</li>
+                <li>We recommend booking 1-2 weeks in advance</li>
+                <li>Same-day appointments may be available</li>
+                <li>Group bookings welcome with advance notice</li>
+            </ul>
+        </div>
+        
+        <div class="policy">
+            <h3>Cancellation Policy</h3>
+            <ul>
+                <li>24-hour notice required for cancellations</li>
+                <li>Late cancellations may incur a 50% charge</li>
+                <li>No-shows will be charged the full service fee</li>
+                <li>Rescheduling is always welcome</li>
+            </ul>
+        </div>
+        
+        <div class="policy">
+            <h3>Payment Options</h3>
+            <ul>
+                <li>Cash, credit cards, and digital payments accepted</li>
+                <li>Gift certificates available</li>
+                <li>Package deals for multiple services</li>
+                <li>Gratuity is appreciated but not required</li>
+            </ul>
+        </div>
+    </div>
+</section>

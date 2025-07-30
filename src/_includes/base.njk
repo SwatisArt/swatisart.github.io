@@ -3,23 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if title %}{{ title }} - {% endif %}{{ site.title or "My Eleventy Site" }}</title>
+    <title>{% if title %}{{ title }} - {% endif %}{{ site.title or "Serenity Beauty Studio" }}</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about/">About</a>
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="/images/logo.png" alt="Serenity Beauty Studio" class="logo">
+            <h1 class="business-name">Serenity Beauty Studio</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+                <li><a href="/henna/" {% if page.url == "/henna/" %}class="active"{% endif %}>Henna</a></li>
+                <li><a href="/makeup/" {% if page.url == "/makeup/" %}class="active"{% endif %}>Makeup</a></li>
+                <li><a href="/facials/" {% if page.url == "/facials/" %}class="active"{% endif %}>Facials</a></li>
+                <li><a href="/massages/" {% if page.url == "/massages/" %}class="active"{% endif %}>Massages</a></li>
+                <li><a href="/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
+            </ul>
         </nav>
     </header>
     
-    <main>
+    <main class="main-content">
         {{ content | safe }}
     </main>
     
-    <footer>
-        <p>&copy; 2025 My Eleventy Site</p>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>Serenity Beauty Studio</strong></p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@serenitybeauty.com</p>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Facebook</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Serenity Beauty Studio. All rights reserved.</p>
     </footer>
 </body>
 </html>
